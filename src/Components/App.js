@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import preloder from "./Images/preloader.gif";
 import "./App.scss";
 import Error from "./Error";
@@ -28,14 +28,10 @@ class App extends Component {
     return setTimeout(this.onLoding, 3000);
   };
 
-  Routs = () => {
-    return configureStore({ history });
-  }
-
   render() {
     const { src, spinner } = this.state;
     return (
-      <BrowserRouter history={Routs()} basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <div className="loader">
           <img src={src} onLoad={this.timingFunction} alt={src} />
         </div>
@@ -54,7 +50,7 @@ class App extends Component {
             <Footer />
           </div>
         )}
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
