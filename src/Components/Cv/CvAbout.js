@@ -14,7 +14,7 @@ class CvAbout extends Component {
           <img
             className="rounded-circle"
             src={item.thumbnail}
-            alt={item.name}
+            alt={item.thumbnail ? item.name  : "" }
           />
           <div className="cv-header">
             <h4>

@@ -11,11 +11,10 @@ class ProjectDetails extends Component {
     return this.props.projects.map(item => {
       return (
         <div className="container">
-          <div className="card transparenr blog p-3 mb-5">
+          <div className="card blog p-3 mb-5">
             <div className="project-header">
               <h4>Project Details</h4>
             </div>
-
             <div className="card text-center" key={item.id}>
               <div className="card-title">
                 <h5 className="card-header">{item.title}</h5>

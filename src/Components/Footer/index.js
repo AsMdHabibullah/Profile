@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { footerActions } from "../../Actions";
 
@@ -55,14 +54,9 @@ class index extends Component {
               </div>
             </div>
             <div className="footer-copyright text-center text-black-50 py-3">
-              <NavLink
-                className="dark-grey-text"
-                to="https://asmdhabibullah.tk"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <h6 className="dark-grey-text">
                 &copy;{new Date().getFullYear()} {item.copy_right}
-              </NavLink>
+              </h6>
             </div>
           </div>
         </footer>

@@ -8,26 +8,41 @@ class CvReference extends Component {
   }
 
   renderReference = () => {
-    return this.props.reference.map(item => {
+    if (this.props.reference === false) {
       return (
-        <>
+        <div>
           <h4 className="cv_second_header">
             <i className="far fa-dot-circle" />
             References
           </h4>
-          <ul>
-            <li key={item.id}>
-              <h5>
-                {item.recommend_person_name} |{" "}
-                <span>{item.recommend_person_position}</span>
-              </h5>
-              <h6>{item.recommend_person_company_name}</h6>
-            </li>
-            <p>{item.recommend_person_anounce}</p>
-          </ul>
-        </>
+          <h4>I have no referance.</h4>
+        </div>
       );
-    });
+    } else {
+      return (
+        <div>
+          <h4 className="cv_second_header">
+            <i className="far fa-dot-circle" />
+            References
+          </h4>
+          {this.props.reference.map(item => {
+            return (
+              <ul>
+                <li key={item.id}>
+                  <i class="fas fa-angle-double-down" />
+                  <h5>
+                    {item.recommend_person_name} |{" "}
+                    <span>{item.recommend_person_position}</span>
+                  </h5>
+                  <h6>{item.recommend_person_company_name}</h6>
+                </li>
+                <p>{item.recommend_person_anounce}</p>
+              </ul>
+            );
+          })}
+        </div>
+      );
+    }
   };
 
   render() {

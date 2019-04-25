@@ -10,19 +10,12 @@ class About extends Component {
   aboutRender = () => {
     return this.props.about.map(item => {
       return (
-        <div className="About">
-          <div className="container">
-            <div className="transparenr p-3 mb-5 text-center align-items-center">
-              <div className="row" key={item.id}>
-                <div className="col-xl-12 col-md-12 col-sm-12 col-xs-12">
-                  <div className="about-text">
-                    <h3>WELCOME TO</h3>
-                    <h2>{item.name}</h2>
-                    <br />
-                    <p>{item.description}</p>
-                  </div>
-                </div>
-              </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12" key={item.id}>
+              <h4 className="text-center p-3">WELCOME TO</h4>
+              <h2 className="text-center">{item.name}</h2>
+              <p>{item.description}</p>
             </div>
           </div>
         </div>

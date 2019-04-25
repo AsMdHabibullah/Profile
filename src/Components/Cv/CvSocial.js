@@ -9,20 +9,35 @@ class CvSocial extends Component {
   }
 
   renderSocial = () => {
-    return this.props.social.map(item => {
+    if (this.props.social === false) {
       return (
         <div className="cv-header">
-        <h4>
-          <i class="fab fa-creative-commons-nd" /> Follow Me
-        </h4>
-        <ul class="list">
-          <li class="list-item" key={item.id}>
-            <NavLink to={item.url}>{item.social_name}</NavLink>
-          </li>
-        </ul>
-      </div>
+          <h4>
+            <i class="fab fa-creative-commons-nd" />
+            Follow Me
+          </h4>
+        </div>
       );
-    });
+    } else {
+      return (
+        <div className="cv-header">
+          <h4>
+            <i class="fab fa-creative-commons-nd" />
+            Follow Me
+          </h4>
+          {this.props.social.map(item => {
+            return (
+              <ul class="list">
+                <li class="list-item" key={item.id}>
+                  <i class="fas fa-angle-double-down" />
+                  <NavLink to={item.url}>{item.social_name}</NavLink>
+                </li>
+              </ul>
+            );
+          })}
+        </div>
+      );
+    }
   };
 
   render() {

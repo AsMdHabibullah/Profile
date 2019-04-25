@@ -1,6 +1,7 @@
 import React from "react";
 import Canvase from "./Canvase";
 import Skills from "./Skills";
+import Clients from './Claints';
 import Projects from "./Projects";
 import Team from "./Team";
 import HomeContact from "./HomeContact";
@@ -10,6 +11,7 @@ const index = () => {
     <React.Fragment>
       <Canvase />
       <Skills />
+      <Clients />
       <Projects />
       <Team />
       <HomeContact />

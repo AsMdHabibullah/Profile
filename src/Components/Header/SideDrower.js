@@ -29,7 +29,7 @@ const SideDrower = ({ visible }) => {
           </li>
           <li>
             <NavLink
-              to="/service"
+              to="/codingtechnique.com"
               target="_blank"
               rel="noopener noreferrer"
             >

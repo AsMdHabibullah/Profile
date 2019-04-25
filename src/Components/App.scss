@@ -152,7 +152,7 @@ h2::after {
   position: absolute;
   margin: 0 auto;
   height: 3px;
-  background: #55fd4f;
+  background: rgb(156, 34, 187);
   left: 0;
   right: 0;
   bottom: -10px;
@@ -284,12 +284,15 @@ Header Section
   height: 50%;
 }
 .author img {
-  width: 15%;
-  height: 100%;
+  width: 20%;
+  height: auto;
   border-radius: 50%;
   margin: 0% 40%;
 }
 
+.logo {
+  margin: 18px 0;
+}
 .logo img {
   width: 100%;
   height: 90px;
@@ -307,10 +310,6 @@ Header Section
 /********
  About Section
  *******/
-.About {
-  width: 100%;
-  position: relative;
-}
 
 .About .owner_img {
   width: 30%;
@@ -319,7 +318,6 @@ Header Section
   border-radius: 50%;
 }
 .about-text {
-  text-align: center;
   margin-top: 20px;
 }
 
@@ -350,7 +348,8 @@ Social Section
  Skill Section
  *****/
 
-#skills {
+#skill {
+  width: 100%;
   background-color: #00cccc;
 }
 
@@ -590,7 +589,7 @@ footer {
   width: 100%;
   height: 100px;
   background-color: rgba(16, 50, 88, 0.548);
-  margin: 10px;
+  margin: 40px 20px;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -610,6 +609,11 @@ footer {
   font-weight: bold;
   margin: 30px 0;
   border-bottom: 1px solid #000;
+}
+
+.cv_second_header h2,
+p {
+  margin: 10px 0;
 }
 
 /*****
@@ -644,9 +648,16 @@ footer {
   #main_menu {
     width: 60%;
   }
-
   .author {
     height: 40%;
+  }
+  .author img {
+    width: 20%;
+    height: auto;
+  }
+  .logo img {
+    height: 72px;
+    margin: 30px 0;
   }
 }
 
@@ -665,6 +676,13 @@ footer {
   .canvas {
     height: auto;
   }
+  .author img {
+    width: 20%;
+    height: auto;
+  }
+  .logo img {
+    height: 72px;
+  }
 }
 
 /* 
@@ -682,6 +700,13 @@ footer {
   }
   .author {
     height: 40%;
+  }
+  .author img {
+    width: 20%;
+    height: auto;
+  }
+  .logo img {
+    height: 72px;
   }
   .canvas {
     height: auto;
@@ -704,6 +729,15 @@ footer {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  h2 {
+    margin: 0px 0px 30px 0px;
+  }
+  .canvas {
+    height: auto;
+    padding: 0px !important;
+    margin-top: 80px;
+  }
+
   #main_menu {
     width: 60%;
   }
@@ -714,15 +748,18 @@ footer {
   .menu_head {
     height: 110px;
   }
+
   .author {
     height: 40%;
   }
+  .author img {
+    width: 20%;
+    height: auto;
+  }
   .logo img {
-    height: auto;
+    height: 50px;
   }
-  .canvas {
-    height: auto;
-  }
+
   .social {
     top: 40%;
   }
@@ -733,5 +770,8 @@ footer {
 
   .contact_author {
     width: 30%;
+  }
+  .cv_author {
+    margin: 10px 0px;
   }
 }

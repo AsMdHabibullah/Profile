@@ -17,7 +17,7 @@ class HomeContact extends Component {
               <img
                 className="contact-author"
                 src={info.thumbnail}
-                alt={info.name}
+                alt={info.thumbnail? info.name : ''}
               />
               <h2>{info.question}</h2>
               <p>{info.ex_description}</p>

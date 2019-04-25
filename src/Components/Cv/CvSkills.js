@@ -7,25 +7,34 @@ class CvSkills extends Component {
     this.props.skillsActions();
   }
 
-  renderSkill = () => {
-    return this.props.skills.map(skill => {
+  render() {
+    if (this.props.skills === false) {
       return (
         <div className="cv-header">
           <h4>
-            <i class="fab fa-creative-commons-nd" /> Pro Skills
+            <i className="fab fa-creative-commons-nd" /> Pro Skills
           </h4>
-          <ul className="list">
-            <li className="list-item" key={skill.id}>
-              {skill.skill_name}
-            </li>
-          </ul>
+          <h6>I have only development skill.</h6>
         </div>
       );
-    });
-  };
-
-  render() {
-    return this.renderSkill();
+    } else {
+      return (
+        <div className="cv-header">
+          <h4>
+            <i className="fab fa-creative-commons-nd" /> Pro Skills
+          </h4>
+          {this.props.skills.map(skill => {
+            return (
+              <ul className="list">
+                <li className="list-item" key={skill.id}>
+                  <i class="fas fa-angle-double-right">{skill.skill_name}</i>
+                </li>
+              </ul>
+            );
+          })}
+        </div>
+      );
+    }
   }
 }
 
