@@ -28,10 +28,14 @@ class App extends Component {
     return setTimeout(this.onLoding, 3000);
   };
 
+  Routs = () => {
+    return configureStore({ history });
+  }
+
   render() {
     const { src, spinner } = this.state;
     return (
-      <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+      <BrowserRouter history={Routs()} basename={process.env.PUBLIC_URL}>
         <div className="loader">
           <img src={src} onLoad={this.timingFunction} alt={src} />
         </div>
