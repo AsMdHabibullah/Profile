@@ -23,7 +23,7 @@ class Skills extends Component {
                     <img
                       className="client_img"
                       src={skill.thumbnail}
-                      alt={skill.thumbnail ? skill.skill_name : ""}
+                      alt={skill.thumbnail ? "" : ""}
                     />
                   </div>
                 </div>
