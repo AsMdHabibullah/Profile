@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     const { src, spinner } = this.state;
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className="loader">
           <img src={src} onLoad={this.timingFunction} alt={src} />
         </div>
