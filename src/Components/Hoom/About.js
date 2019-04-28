@@ -10,7 +10,7 @@ class About extends Component {
   aboutRender = () => {
     return this.props.about.map(item => {
       return (
-        <div className="container">
+        <div className="container about">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12" key={item.id}>
               <h4 className="text-center p-3">WELCOME TO</h4>
